@@ -15,13 +15,6 @@ The code which implements any of the APIs in your organization is part of it's s
 
 Red Hat OpenShift is one of the leading container management platforms available in the market. It is based on the highly popular Kubernetes Open Source project which Red Hat is a leading contributor to. 
 
-### Skipping The Lab
-
-If you are planning to follow to the next lab, there is an already deployed and running Location API Service in this endpoint:
-
-```bash
-http://location-service-international.apps.GUID.openshiftworkshop.com
-```
 
 ### Environment
 
@@ -32,28 +25,12 @@ Check with your instruction the *GUID* number of your current workshop environme
 Example in case of *GUID* = **1234**: 
 
 ```bash
-https://master.GUID.openshiftworkshop.com
+https://loadbalancer.GUID.example.opentlc.com
+
+UserName: userX
+PassWord: r3dh4t1!
 ```
 
-becomes =>
-
-```bash
-https://master.1234.openshiftworkshop.com
-```
-
-**Credentials:**
-
-Your username is your asigned user number. For example, if you are assigned user number **1**, your username is: 
-
-```bash
-user1
-```
-
-The password to login is always the same:
-
-```bash
-openshift
-```
 
 ## Lab Instructions
 
@@ -62,7 +39,7 @@ openshift
 1. Open a browser window and navigate to:
 
     ```bash
-    https://master.GUID.openshiftworkshop.com/console
+    https://loadbalancer.GUID.example.opentlc.com/console
     ```
 
     *Remember to replace the GUID with your [environment](#environment) value and your user number.*
@@ -156,7 +133,7 @@ We now have a working Location API Service implementation listening for requests
 1. Enter the following URL: 
 
     ```bash
-    http://location-service-userX.apps.GUID.openshiftworkshop.com/locations/1
+    http://location-service-userX.apps.GUID.example.opentlc.com/locations/1
     ```
 
     Remember to replace the GUID with your [environment](#environment) values and your user number. It should look like this:

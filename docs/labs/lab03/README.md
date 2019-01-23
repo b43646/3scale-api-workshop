@@ -15,13 +15,6 @@ Once you have APIs deployed in your environment, it becomes critically important
 
 Red Hat provides one the leading API Management tools which provide management services. The 3scale API Management solution enables you to quickly and easy protect and manage your APIs.
 
-### Skipping The Lab
-
-If you are planning to follow to the next lab, there is an already running API proxy for the Location API Service in this endpoint:
-
-```bash
-https://location-service-api.amp.apps.GUID.openshiftworkshop.com
-```
 
 ### Environment
 
@@ -32,7 +25,7 @@ Check with your instruction the *GUID* number of your current workshop environme
 Example in case of *GUID* = **1234**:
 
 ```bash
-https://master.GUID.openshiftworkshop.com
+https://loadbalancer.GUID.example.opentlc.com
 ```
 
 becomes =>
@@ -64,7 +57,7 @@ Your 3scale Admin Portal provides access to a number of configuration features.
 1. Open a browser window and navigate to:
 
     ```bash
-    https://userX-admin.apps.GUID.openshiftworkshop.com/
+    https://userX-admin.apps.GUID.example.opentlc.com
     ```
 
     *Remember to replace the GUID with your [environment](#environment) value and your user number.*
@@ -203,9 +196,9 @@ The order in which the policies are executed, known as the “policy chain”, c
 
     * Private Base URL: **http://location-service.userX.svc:8080**
 
-    * Staging Public Base URL: **https://location-userX-api-staging.amp.apps.GUID.openshiftworkshop.com:443**
+    * Staging Public Base URL: **https://locations-stage-apicast-userX-threescale.apps.GUID.example.opentlc.com:443**
 
-    * Production Public Base URL: **https://location-userX-api.amp.apps.GUID.openshiftworkshop.com:443**
+    * Production Public Base URL: **https://locations-production-apicast-userX-threescale.apps.GUID.example.opentlc.com:443**
 
     *Remember to replace the GUID with your [environment](#environment) value*.
 
