@@ -105,7 +105,7 @@ You are now in the main screen to edit your APIs. Different from other API edito
 
 Let's start crafting your API.
 
-1. Time to prepare our data definitions for the API. Click on the **Add a definition** link under the *Definitions*.
+1. Time to prepare our data definitions for the API. Click on the **Add a data type** link under the *Data Types*.
 
     ![design-add-definition](images/design-15.png "Add Definition")
 
