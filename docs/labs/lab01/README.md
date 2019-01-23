@@ -30,13 +30,13 @@ Check with your instruction the *GUID* number of your current workshop environme
 Example in case of *GUID* = **1234**: 
 
 ```bash
-https://master.GUID.openshiftworkshop.com
+https://loadbalancer.GUID.example.opentlc.com
 ```
 
 becomes =>
 
 ```bash
-https://master.1234.openshiftworkshop.com
+https://loadbalancer.1234.example.opentlc.com
 ```
 
 **Credentials:**
@@ -50,7 +50,7 @@ user1
 The password to login is always the same:
 
 ```bash
-openshift
+r3dh4t1!
 ```
 
 ## Lab Instructions
@@ -60,7 +60,7 @@ openshift
 1. Open a browser window and navigate to:
 
     ```bash
-    http://apicurio-studio.apps.GUID.openshiftworkshop.com/
+    http://apicurio-studio.apps.GUID.example.opentlc.com
     ```
 
 1. Accept the self-signed certificate if you haven't: 
