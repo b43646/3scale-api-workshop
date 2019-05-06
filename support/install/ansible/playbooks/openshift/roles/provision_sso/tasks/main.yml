@@ -9,11 +9,11 @@
   ignore_errors: true
 
 - name: Create image streams for RH SSO
-  shell: "oc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/{{ sso_version }}/sso/sso72-image-stream.json -n openshift"
+  shell: "oc create -f http://{{ fileserver }}/res/sso/sso72-image-stream.json -n openshift"
   when: configure_only == 'false' and imagestream_exists.failed
 
 - name: Create secrets for RH SSO
-  shell: "oc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/{{ sso_version }}/secrets/sso-app-secret.json -n {{ sso_project }}"
+  shell: "oc create -f http://{{ fileserver }}/res/sso/sso-app-secret.json -n {{ sso_project }}"
   when: configure_only == 'false'
 
 - name: Create service account for clustering
@@ -25,7 +25,7 @@
   when: configure_only == 'false'
 
 - name: Create RH SSO app
-  shell: "oc new-app -f https://raw.githubusercontent.com/jboss-openshift/application-templates/{{ sso_version }}/sso/sso72-mysql-persistent.json -p HTTPS_NAME=jboss -p HTTPS_PASSWORD=mykeystorepass -p SSO_ADMIN_USERNAME=keyadmin \
+  shell: "oc new-app -f http://{{ fileserver }}/res/sso/sso72-mysql-persistent.json -p HTTPS_NAME=jboss -p HTTPS_PASSWORD=mykeystorepass -p SSO_ADMIN_USERNAME=keyadmin \
   -p SSO_ADMIN_PASSWORD=keypassword -n {{sso_project}}"
   when: configure_only == 'false'
 
@@ -44,7 +44,7 @@
 
 - name: Get templated realm
   uri:
-    url: 'https://raw.githubusercontent.com/hguerrero/3scale-api-workshop/master/support/templates/realm-template.json'
+    url: 'http://{{ fileserver }}/res/sso/realm-template.json'
     return_content: yes
   register: get_realm
   when: create_realms

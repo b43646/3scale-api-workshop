@@ -15,3 +15,4 @@ user_projects=true
 configure_only=false
 create_tenants=true
 create_realms=true
+fileserver=127.0.0.1
