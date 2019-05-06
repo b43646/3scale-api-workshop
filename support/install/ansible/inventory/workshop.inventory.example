@@ -2,8 +2,8 @@
 localhost ansible_connection=local
 
 [workshop:vars]
-ocp_domain=GUID.openshiftworkshop.com
-ocp_apps_domain=apps.GUID.openshiftworkshop.com
+ocp_domain=ecf2.example.opentlc.com
+ocp_apps_domain=apps.ecf2.example.opentlc.com
 usersno=20
 threescale=true
 apicurio=true
